@@ -1,14 +1,14 @@
-##Time-to-Incident Survival Analysis for Production Systems
+__Time-to-Incident Survival Analysis for Production Systems__
 
 Hazard-Based Modeling with Censoring, Calibration, and Diagnostics
 
- Overview
+ __Overview__
 
 This project builds an end-to-end survival analysis pipeline to model time-to-incident in production systems using hazard-based statistical modeling.
 
 Instead of treating incidents as a binary classification problem, this work models when incidents occur, explicitly handling right-censoring, uncertainty, and risk escalation under system stress. The methodology aligns with reliability engineering and site reliability analytics used in large-scale infrastructure.
 
-Problem Statement
+__Problem Statement__
 
 In production environments, many systems do not fail during the observation window. Traditional classification approaches ignore this censoring and fail to answer questions such as:
 
@@ -55,7 +55,7 @@ event	1 = incident observed, 0 = censored
 
 Right-censoring naturally arises when monitoring ends before an incident occurs.
 
-Methodology
+__Methodology__
 1. Non-Parametric Baseline
 
 Kaplan–Meier survival estimation
