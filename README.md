@@ -20,7 +20,7 @@ What is the probability the system survives the next hour?
 
 This project addresses these questions using survival analysis, not classification.
 
- Why Survival Analysis 
+ __Why Survival Analysis__ 
 
 Incidents are time-to-event outcomes
 
@@ -38,7 +38,7 @@ principled likelihood-based inference
 
 calibrated survival probabilities
 
-Data Description
+__Data Description__
 
 The dataset is synthetically generated to mimic production telemetry while preserving known ground truth.
 
@@ -56,7 +56,7 @@ event	1 = incident observed, 0 = censored
 Right-censoring naturally arises when monitoring ends before an incident occurs.
 
 __Methodology__
-1. Non-Parametric Baseline
+__1. Non-Parametric Baseline__
 
 Kaplan–Meier survival estimation
 
@@ -64,7 +64,7 @@ Stratified survival curves by stress level
 
 Visual inspection of survival separation
 
-2. Parametric Hazard Model
+__2. Parametric Hazard Model__
 
 An exponential hazard model with covariates:
 
@@ -73,7 +73,7 @@ An exponential hazard model with covariates:
 
 Estimated via maximum likelihood, not black-box fitting.
 
-3. Likelihood-Based Inference
+__3. Likelihood-Based Inference__
 
 Custom negative log-likelihood
 
@@ -81,7 +81,7 @@ Numerical optimization (BFGS)
 
 Interpretable coefficients and hazard ratios
 
-4. Model Evaluation
+__4. Model Evaluation__
 
 Train/Test split
 
@@ -89,13 +89,13 @@ Concordance index (C-index) for ranking quality
 
 Calibration via risk stratification
 
-5. Diagnostics
+__5. Diagnostics__
 
 Cox–Snell residuals
 
 Empirical vs Exp(1) comparison to assess model adequacy
 
-🔍 Key Results
+__Key Results__
 
 High-stress services exhibit lower survival probabilities
 
@@ -105,7 +105,7 @@ Predicted risk groups show monotonic survival separation
 
 Cox–Snell residuals indicate reasonable model fit
 
-🛠️ Actionable Outputs (SRE-Style)
+__Actionable Outputs (SRE-Style)__
 
 The model enables:
 
